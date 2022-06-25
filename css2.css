@@ -1,0 +1,56 @@
+/* BASE CSS */
+body {
+	list-style: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    font-family: 'Lato', sans-serif;
+    background: #e2dedb;
+    color: #b3aca7;
+}
+
+header {
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 7px;
+  }
+  
+
+img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+/* ここからカードレイアウトのスタイリング */
+/* PC　3カラム */
+.bl_media_container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(-30px / 2);
+	padding: 30px;
+}
+.bl_media_itemWrapper {
+	width: calc(100% / 3 - 30px);
+	margin: calc(30px / 2);
+}
+.bl_media_item {
+	outline: 1px solid #000;
+	font-size: 1.5vw;
+}
+/* タブレット　2カラム */
+@media screen and (max-width: 1024px) {
+	.bl_media_itemWrapper {
+		width: calc(100% / 2 - 30px);
+	}
+}
+/* スマホ 1カラム*/
+@media screen and (max-width: 599px) {
+	.bl_media_itemWrapper {
+		width: calc(100% / 1 - 30px);
+	}
+}
+
+a:link, a:visited, a:active{ color: #bbb5af; } 
+a:hover{ color: #b3aca7; } 
